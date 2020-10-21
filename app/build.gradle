@@ -1,0 +1,84 @@
+import dependencies.Dependencies
+import dependencies.Versions
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion Versions.compileSdk
+
+    defaultConfig {
+        applicationId "com.ankitdubey021.stackexchangefeatureapp"
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Versions.versionCode
+        versionName Versions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation Dependencies.kotlin_standard_library
+    implementation Dependencies.ktx
+    implementation Dependencies.activityKtx
+    implementation Dependencies.app_compat
+    implementation Dependencies.constraint_layout
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    //Coroutines
+    implementation Dependencies.coroutines
+    implementation Dependencies.coroutines_android
+
+    //Dagger-Hilt
+    implementation Dependencies.hilt
+    implementation Dependencies.hilt_view_model
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    kapt Dependencies.hilt_compiler
+    kapt Dependencies.hilt_dagger_compiler
+
+    implementation Dependencies.lifecycle_runtime_ktx
+    implementation Dependencies.material
+
+    //Retrofit
+    implementation Dependencies.retrofit_core
+    implementation Dependencies.retrofit_gson
+    implementation Dependencies.retrofit_log
+    implementation Dependencies.timber
+
+    implementation Dependencies.ssp
+    implementation Dependencies.sdp
+
+    implementation Dependencies.glide
+    kapt Dependencies.glide_compiler
+
+    testImplementation Dependencies.junit
+    androidTestImplementation Dependencies.junit_ext
+    androidTestImplementation Dependencies.espresso
+
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="dao"
+            type="com.ankitdubey021.stackexchangefeatureapp.data.User" />
+    </data>
+
+    <com.ankitdubey021.stackexchangefeatureapp.utils.MaskedCardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.MyApp.RoundedThumb"
+        android:backgroundTint="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="fitXY"
+                android:transitionName="image"
+                app:imageFromUrl="@{dao.profile_image}"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@{dao.display_name}"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins_med"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            tools:text="Hello How are you"
+            android:textSize="@dimen/_11sdp"
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@{dao.location}"
+                android:fontFamily="@font/poppins_reg"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                tools:text="Hello How are you"
+                android:textSize="@dimen/_9sdp"
+                />
+
+
+        </LinearLayout>
+    </com.ankitdubey021.stackexchangefeatureapp.utils.MaskedCardView>
+
+</layout>

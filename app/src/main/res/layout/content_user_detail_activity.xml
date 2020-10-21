@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.core.widget.NestedScrollView
+    tools:showIn="@layout/activity_user_detail"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_med"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/badges"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/silver_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/silver"
+                android:text="Silver | 50"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/bronze_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/bronze"
+                android:text="Bronze | 50"/>
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/gold_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gold"
+                android:text="Gold | 100"/>
+
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="silver_chip,bronze_chip,gold_chip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_med"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/reputation"/>
+
+        <TextView
+            android:id="@+id/tv_reputation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_reg"
+            android:background="@drawable/reputation_bg"
+            android:textSize="@dimen/_11ssp"
+            android:padding="@dimen/_12sdp"
+            />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+</layout>

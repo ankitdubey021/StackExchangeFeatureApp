@@ -1,0 +1,31 @@
+package dependencies
+
+object Dependencies {
+    val kotlin_standard_library = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    val ktx = "androidx.core:core-ktx:${Versions.ktx}"
+    val activityKtx = "androidx.activity:activity-ktx:${Versions.activityKtx}"
+    val app_compat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    val constraint_layout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    val coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    val glide_compiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+    val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+    val hilt_compiler = "androidx.hilt:hilt-compiler:${Versions.hiltCompiler}"
+    val hilt_view_model = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltCompiler}"
+    val hilt_dagger_compiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    val lifecycle_runtime_ktx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleRuntimeKtx}"
+    val material ="com.google.android.material:material:${Versions.material}"
+    val navigation_fragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    val navigation_ui = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    val retrofit_core = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    val retrofit_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    val retrofit_log = "com.squareup.okhttp3:logging-interceptor:4.2.0"
+    val sdp = "com.intuit.sdp:sdp-android:${Versions.dynamicSize}"
+    val ssp = "com.intuit.ssp:ssp-android:${Versions.dynamicSize}"
+    val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+
+    val junit="junit:junit:${Versions.junit}"
+    val junit_ext="androidx.test.ext:junit:${Versions.junitExt}"
+    val espresso="androidx.test.espresso:espresso-core:${Versions.espresso}"
+}

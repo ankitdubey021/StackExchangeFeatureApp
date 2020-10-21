@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StackExchangeFeatureApp</string>
+    <string name="search">Search</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+    <string name="speech_prompt">Search for any user</string>
+    <string name="badges">Badges</string>
+    <string name="reputation">Reputation</string>
+</resources>
