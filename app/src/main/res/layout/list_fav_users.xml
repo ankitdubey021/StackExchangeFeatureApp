@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="dao"
+            type="com.ankitdubey021.stackexchangefeatureapp.database.UserDB"/>
+    </data>
+
+    <com.ankitdubey021.stackexchangefeatureapp.utils.MaskedCardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.FavShape"
+        android:backgroundTint="@color/white_light"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:scaleType="fitXY"
+                android:transitionName="image"
+                app:imageFromUrl="@{dao.profile_image}"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@{dao.display_name}"
+                        android:textColor="@color/black"
+                        android:maxLines="2"
+                        android:fontFamily="@font/poppins_med"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        tools:text="John Doe"
+                        android:textSize="@dimen/_11sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@{dao.location}"
+                        android:fontFamily="@font/poppins_reg"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        tools:text="NYC"
+                        android:maxLines="3"
+                        android:textSize="@dimen/_9sdp"
+                        />
+
+
+
+                </LinearLayout>
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/spark_button"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="@dimen/_minus5sdp"
+                    app:sparkbutton_activeImage="@drawable/ic_favorite"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_favorite"
+                    app:sparkbutton_primaryColor="@color/black"
+                    app:sparkbutton_secondaryColor="@color/black" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.ankitdubey021.stackexchangefeatureapp.utils.MaskedCardView>
+</layout>

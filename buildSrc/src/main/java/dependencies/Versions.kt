@@ -26,6 +26,7 @@ object Versions {
     val material="1.2.1"
     val navigation="2.3.0"
     val retrofit="2.9.0"
+    val room = "2.1.0-alpha06"
     val timber="4.7.1"
 
 }

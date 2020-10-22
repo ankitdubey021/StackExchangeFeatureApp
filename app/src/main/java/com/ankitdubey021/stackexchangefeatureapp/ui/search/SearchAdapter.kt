@@ -8,7 +8,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.ankitdubey021.stackexchangefeatureapp.R
 import com.ankitdubey021.stackexchangefeatureapp.data.User
-import com.ankitdubey021.stackexchangefeatureapp.data.UserClickCallback
 import com.ankitdubey021.stackexchangefeatureapp.databinding.ListUsersBinding
 import kotlinx.android.synthetic.main.list_users.view.*
 

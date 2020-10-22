@@ -42,7 +42,7 @@ class Splash : AppCompatActivity() {
     }
 
     private fun proceedToHome() {
-        launchActivity<Search> { }
+        launchActivity<Home> { }
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         finish()
     }

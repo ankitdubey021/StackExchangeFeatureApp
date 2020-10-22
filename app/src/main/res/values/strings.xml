@@ -5,4 +5,6 @@
     <string name="speech_prompt">Search for any user</string>
     <string name="badges">Badges</string>
     <string name="reputation">Reputation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

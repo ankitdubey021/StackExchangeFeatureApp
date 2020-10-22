@@ -21,8 +21,11 @@ object Dependencies {
     val retrofit_core = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     val retrofit_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     val retrofit_log = "com.squareup.okhttp3:logging-interceptor:4.2.0"
+    val room_core = "androidx.room:room-runtime:${Versions.room}"
+    val room_compiler = "androidx.room:room-compiler:${Versions.room}"
     val sdp = "com.intuit.sdp:sdp-android:${Versions.dynamicSize}"
     val ssp = "com.intuit.ssp:ssp-android:${Versions.dynamicSize}"
+    val spark_button = "com.github.varunest:sparkbutton:1.0.6"
     val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 
     val junit="junit:junit:${Versions.junit}"

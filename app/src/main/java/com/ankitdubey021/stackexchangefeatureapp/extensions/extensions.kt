@@ -12,8 +12,12 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ankitdubey021.stackexchangefeatureapp.data.asDBUser
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.varunest.sparkbutton.SparkButton
+import com.varunest.sparkbutton.SparkEventListener
+import kotlinx.android.synthetic.main.content_user_detail_activity.view.*
 import timber.log.Timber
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -41,8 +45,6 @@ fun View.show(){
     this.visibility = View.VISIBLE
 }
 
-fun Context.getColorRes(@ColorRes id: Int) = ContextCompat.getColor(applicationContext, id)
-
 
 fun RecyclerView.xOnScrollListener(load : () -> Unit){
 
@@ -64,4 +66,18 @@ fun ImageView.loadImgUrl(path : String){
         .load(path)
         .transition(DrawableTransitionOptions.withCrossFade())
         .into(this)
+}
+
+fun SparkButton.setFavActionListener(callback : (Boolean)-> Unit){
+    this.setEventListener(object : SparkEventListener {
+        override fun onEventAnimationEnd(button: ImageView?, buttonState: Boolean) {
+        }
+
+        override fun onEvent(button: ImageView?, buttonState: Boolean) {
+            callback(buttonState)
+        }
+
+        override fun onEventAnimationStart(button: ImageView?, buttonState: Boolean) {
+        }
+    })
 }

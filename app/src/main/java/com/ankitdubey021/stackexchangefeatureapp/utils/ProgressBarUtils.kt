@@ -14,7 +14,6 @@ class ProgressBarUtils {
             context: Context?
         ) {
             if (context == null){
-                println("Context can not be null")
                 return
             }
             if (mProgressDialog != null && mProgressDialog!!.isShowing) {

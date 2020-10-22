@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/frag_users">
+    <fragment
+        android:id="@+id/frag_users"
+        android:name="com.ankitdubey021.stackexchangefeatureapp.ui.search.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/frag_fav"
+        android:name="com.ankitdubey021.stackexchangefeatureapp.ui.wishlist.WishListFrag"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" />
+</navigation>

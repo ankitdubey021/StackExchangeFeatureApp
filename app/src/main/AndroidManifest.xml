@@ -12,9 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StackExchangeFeatureApp">
-        <activity
+        <activity android:name=".ui.Home"
             android:theme="@style/NoBar"
-            android:name=".ui.details.UserDetail"></activity>
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".ui.details.UserDetail"
+            android:theme="@style/NoBar" />
         <activity
             android:name=".ui.search.Search"
             android:theme="@style/NoBar" />

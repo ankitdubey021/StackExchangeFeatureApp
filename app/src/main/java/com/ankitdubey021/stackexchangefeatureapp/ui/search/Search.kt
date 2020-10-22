@@ -8,7 +8,6 @@ import android.speech.RecognizerIntent
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
@@ -17,21 +16,21 @@ import androidx.lifecycle.lifecycleScope
 import com.ankitdubey021.stackexchangefeatureapp.R
 import com.ankitdubey021.stackexchangefeatureapp.data.State
 import com.ankitdubey021.stackexchangefeatureapp.data.User
-import com.ankitdubey021.stackexchangefeatureapp.data.UserClickCallback
 import com.ankitdubey021.stackexchangefeatureapp.data.UserList
 import com.ankitdubey021.stackexchangefeatureapp.databinding.ActivitySearchBinding
-import com.ankitdubey021.stackexchangefeatureapp.extensions.*
+import com.ankitdubey021.stackexchangefeatureapp.extensions.hide
+import com.ankitdubey021.stackexchangefeatureapp.extensions.show
+import com.ankitdubey021.stackexchangefeatureapp.extensions.toast
+import com.ankitdubey021.stackexchangefeatureapp.extensions.xOnScrollListener
 import com.ankitdubey021.stackexchangefeatureapp.ui.details.UserDetail
 import com.ankitdubey021.stackexchangefeatureapp.utils.ProgressBarUtils
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_splash.*
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import okhttp3.ResponseBody
 import org.json.JSONObject
-import timber.log.Timber
 import java.util.*
 
 @AndroidEntryPoint
@@ -81,7 +80,7 @@ class Search : AppCompatActivity(), SearchAdapter.UserClickListener{
 
             searchAdapter.daos = userList
 
-            binding.userRv.apply {
+            userRv.apply {
                 adapter = searchAdapter
 
                 xOnScrollListener {

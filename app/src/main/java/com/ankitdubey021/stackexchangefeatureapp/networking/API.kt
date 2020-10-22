@@ -1,5 +1,3 @@
 package com.ankitdubey021.stackexchangefeatureapp.networking
 
-const val apiLogin = "login"
-const val apiFetchDevelopers = "fetchcustomers"
-const val apiCategories = "category"
+const val apiUsers = "users?order=desc&sort=reputation&site=stackoverflow&pagesize=50"
